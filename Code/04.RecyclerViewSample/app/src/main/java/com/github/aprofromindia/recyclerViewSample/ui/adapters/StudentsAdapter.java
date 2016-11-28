@@ -33,7 +33,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.Studen
 
     @Override
     public void onBindViewHolder(StudentsViewHolder holder, final int position) {
-        Student student = students.get(position);
+        final Student student = students.get(position);
         holder.studentIV.setImageResource(student.getPhoto());
         holder.nameTV.setText(student.getName());
         holder.genderTV.setText(student.getGender());
