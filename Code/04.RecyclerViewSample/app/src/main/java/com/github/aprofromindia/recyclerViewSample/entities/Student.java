@@ -13,17 +13,6 @@ import android.support.annotation.NonNull;
 @AnyThread
 public class Student implements Parcelable {
 
-    public static final Creator<Student> CREATOR = new Creator<Student>() {
-        @Override
-        public Student createFromParcel(Parcel source) {
-            return new Student(source);
-        }
-
-        @Override
-        public Student[] newArray(int size) {
-            return new Student[size];
-        }
-    };
     private String name;
     private String gender;
     @DrawableRes
@@ -33,12 +22,6 @@ public class Student implements Parcelable {
         this.name = name;
         this.gender = gender;
         this.photo = photo;
-    }
-
-    protected Student(Parcel in) {
-        this.name = in.readString();
-        this.gender = in.readString();
-        this.photo = in.readInt();
     }
 
     @NonNull
@@ -56,6 +39,7 @@ public class Student implements Parcelable {
         return photo;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -67,4 +51,22 @@ public class Student implements Parcelable {
         dest.writeString(this.gender);
         dest.writeInt(this.photo);
     }
+
+    protected Student(Parcel in) {
+        this.name = in.readString();
+        this.gender = in.readString();
+        this.photo = in.readInt();
+    }
+
+    public static final Creator<Student> CREATOR = new Creator<Student>() {
+        @Override
+        public Student createFromParcel(Parcel source) {
+            return new Student(source);
+        }
+
+        @Override
+        public Student[] newArray(int size) {
+            return new Student[size];
+        }
+    };
 }
