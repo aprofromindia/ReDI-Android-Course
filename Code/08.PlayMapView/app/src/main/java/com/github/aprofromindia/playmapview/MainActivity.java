@@ -27,20 +27,24 @@ public class MainActivity extends AppCompatActivity {
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
-                MainActivityPermissionsDispatcher.setupMapWithCheck(MainActivity.this, googleMap);
+                MainActivityPermissionsDispatcher
+                        .enableMyLocationWithCheck(MainActivity.this, googleMap);
             }
         });
     }
 
 
+    @SuppressWarnings("MissingPermission")
     @NeedsPermission(Manifest.permission.ACCESS_FINE_LOCATION)
-    void setupMap(@NonNull GoogleMap googleMap) {
+    void enableMyLocation(GoogleMap googleMap){
         googleMap.setMyLocationEnabled(true);
     }
 
+
     @OnPermissionDenied(Manifest.permission.ACCESS_FINE_LOCATION)
-    void showDenyToast(){
-        Toast.makeText(this, "Please enable Map permissions for proper usage!", Toast.LENGTH_SHORT).show();
+    void showPermissionDeniedInfo(){
+        Toast.makeText(this, "Please enable Location permission for proper app usage",
+                Toast.LENGTH_SHORT).show();
     }
 
     @Override
