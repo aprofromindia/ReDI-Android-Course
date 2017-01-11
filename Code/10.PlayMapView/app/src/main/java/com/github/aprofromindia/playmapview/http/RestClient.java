@@ -12,7 +12,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestClient {
-    private static final String URL = "https://redi-free-wifi.herokuapp.com/venues.json";
+    private static final String URL = "https://redi-free-wifi.herokuapp.com";
     private static final String USERNAME = "free_wifi@redi-school.org";
     private static final String PASSWORD = "y3LTqULBe45yRQ6R";
     private static final RestClient ourInstance = new RestClient();
