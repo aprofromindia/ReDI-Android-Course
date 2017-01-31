@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DataBinding</string>
+    <string name="main_btn_title">Click Me</string>
+</resources>
