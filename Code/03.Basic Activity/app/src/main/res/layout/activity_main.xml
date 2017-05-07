@@ -7,17 +7,34 @@
     android:layout_height="match_parent"
     tools:context="com.github.aprofromindia.basicActivity.MainActivity">
 
+
     <Button
-        android:text="Click me!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/main_btn"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:text="Go to detail!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_btn"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:text="Open Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/dialog_btn"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toBottomOf="@+id/main_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="60dp"/>
+
+
 </android.support.constraint.ConstraintLayout>
