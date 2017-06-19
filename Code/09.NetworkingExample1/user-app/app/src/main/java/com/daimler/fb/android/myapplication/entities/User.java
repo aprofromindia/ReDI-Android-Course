@@ -26,4 +26,9 @@ public class User {
     public String getSubject() {
         return subject;
     }
+
+    @Override
+    public String toString() {
+        return "User " + name + " age - " + age + " subject - " + subject;
+    }
 }
